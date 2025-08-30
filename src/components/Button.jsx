@@ -1,12 +1,10 @@
-function Button({ children, onClick, active }) {
+// components/Button.jsx
+function Button({ children, active, ...rest }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      data-active={active ? "true" : "false"}
-    >
+    <button data-active={active ? "true" : "false"} {...rest}>
       {children}
     </button>
   );
 }
+
 export default Button;
